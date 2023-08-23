@@ -12,12 +12,12 @@
 <body>
     <div class="nav">
         <div class="logo">
-            <p><a href="../views/home.html">Lord's Devs</a></p>
+            <p><a href="../views/home.php">Lord's Devs</a></p>
         </div>
 
         <div class="right-links">
-            <a href="edit.html">Edit Profile</a>
-            <a href="Logout.php">
+            <a href="edit.php">Edit Profile</a>
+            <a href="../controllers/log-out.php">
                 <button class="btn">Log Out</button>
             </a>
         </div>
