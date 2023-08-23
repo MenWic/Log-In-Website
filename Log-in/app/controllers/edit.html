@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/css/form-style.css">
-    <title>Register</title>
+    <link rel="stylesheet" href="../../assets/css/home-style.css">
+    <title>Edit Profile</title>
 </head>
 
 <body>
+    <div class="nav">
+        <div class="logo">
+            <p><a href="../views/home.html">Lord's Devs</a></p>
+        </div>
+
+        <div class="right-links">
+            <a href="edit.html">Edit Profile</a>
+            <a href="Logout.php">
+                <button class="btn">Log Out</button>
+            </a>
+        </div>
+    </div>
     <div class="container">
         <div class="box form-box">
-            <header>Sign Up</header>
+            <header>Edit Profile</header>
             <form action="" class="post">
 
                 <div class="field input">
@@ -20,26 +33,17 @@
                 </div>
 
                 <div class="field input">
-                    <label for="age">Age</label>
-                    <input type="number" name="age" id="age" autocomplete="off" required>
-                </div>
-
-                <div class="field input">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" autocomplete="off" required>
                 </div>
 
                 <div class="field input">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" required>
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" autocomplete="off" required>
                 </div>
 
                 <div class="field">
-                    <input type="submit" class="btn" name="submit" value="Login">
-                </div>
-
-                <div class="link">Already have an account?
-                    <a href="../../index.html">Sign in here!</a>
+                    <input type="submit" class="btn" name="submit" value="Update">
                 </div>
 
             </form>
