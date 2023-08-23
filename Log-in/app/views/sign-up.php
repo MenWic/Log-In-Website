@@ -22,27 +22,26 @@
                 $age = $_POST['age'];
                 $password = $_POST['password'];
 
-                //verifying the unique email
-            
+                //Verificar que el email no se haya utilizado aun
                 $verify_query = mysqli_query($con, "SELECT Email FROM users WHERE Email='$email'");
 
+                //Si no es 0, hay 1 cuenta con ese correo, por ende, ERROR
                 if (mysqli_num_rows($verify_query) != 0) {
-                    echo "<div class='message'>
-                      <p>El email ya ha sido usado, usa uno distinto.</p>
-                  </div> <br>";
-                    echo "<a href='javascript:self.history.back()'><button class='btn'>Regresar</button>";
-                } else {
 
+                    echo "<div class='message'>
+                            <p>El email ya ha sido usado, usa uno distinto.</p>
+                        </div> <br>";
+                    echo "<a href='javascript:self.history.back()'><button class='btn'>Regresar</button>";
+
+                } else { //Si no se ha usado el corrreo, hacemos la incersion a la db
                     mysqli_query($con, "INSERT INTO users(Username,Email,Age,Password) VALUES('$username','$email','$age','$password')") or die("Ocurrio un Error");
 
                     echo "<div class='message'>
-                      <p>Registro completado!</p>
-                  </div> <br>";
+                            <p>Registro completado!</p>
+                        </div> <br>";
                     echo "<a href='../../index.php'><button class='btn'>Inicia Sesion</button>";
 
-
                 }
-
             } else {
 
                 ?>
@@ -60,7 +59,7 @@
                     </div>
 
                     <div class="field input">
-                        <label for="age">Edad</label>
+                        <label for="age">Edad Cristiana</label>
                         <input type="number" name="age" id="age" autocomplete="off" required>
                     </div>
                     <div class="field input">

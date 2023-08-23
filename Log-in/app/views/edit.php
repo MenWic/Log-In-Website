@@ -16,7 +16,7 @@
         </div>
 
         <div class="right-links">
-            <a href="edit.php">Edit Profile</a>
+            <a href="edit.php">Editar</a>
             <a href="../controllers/log-out.php">
                 <button class="btn">Log Out</button>
             </a>
@@ -24,7 +24,7 @@
     </div>
     <div class="container">
         <div class="box form-box">
-            <header>Edit Profile</header>
+            <header>Editar Perfil</header>
             <form action="" class="post">
 
                 <div class="field input">
@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="field input">
-                    <label for="age">Age</label>
+                    <label for="age">Edad cristiana</label>
                     <input type="number" name="age" id="age" autocomplete="off" required>
                 </div>
 

@@ -26,14 +26,15 @@ session_start();
                 $row = mysqli_fetch_assoc($result);
 
                 if (is_array($row) && !empty($row)) {
-                    $_SESSION['valid'] = $row['Email'];
+                    $_SESSION['email'] = $row['Email']; //El 'valid' estaba mal, era 'email'
                     $_SESSION['username'] = $row['Username'];
                     $_SESSION['age'] = $row['Age'];
                     $_SESSION['id'] = $row['Id'];
                 } else {
+
                     echo "<div class='message'>
-                      <p>Datos invalidos</p>
-                       </div> <br>";
+                            <p>Credenciales invalidas</p>
+                        </div> <br>";
                     echo "<a href='index.php'><button class='btn'>Regresar</button>";
 
                 }
