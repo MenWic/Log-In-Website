@@ -26,10 +26,11 @@ session_start();
                 $row = mysqli_fetch_assoc($result);
 
                 if (is_array($row) && !empty($row)) {
-                    $_SESSION['email'] = $row['Email']; //El 'valid' estaba mal, era 'email'
+                    $_SESSION['email'] = $row['Email'];
                     $_SESSION['username'] = $row['Username'];
                     $_SESSION['age'] = $row['Age'];
                     $_SESSION['id'] = $row['Id'];
+                    $_SESSION['valid'] = $row['Email']; //El 'valid' estaba mal al inicio, era 'email'
                 } else {
 
                     echo "<div class='message'>
